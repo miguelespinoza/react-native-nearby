@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/miguelespinoza/react-native-nearby/issues"
   },
-  "homepage": "https://github.com/miguelespinoza/react-native-nearby#readme"
+  "homepage": "https://github.com/miguelespinoza/react-native-nearby#readme",
+  "devDependencies": {
+    "react-native": "^0.45.1"
+  }
 }
