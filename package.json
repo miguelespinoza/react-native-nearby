@@ -1,6 +1,6 @@
 {
   "name": "react-native-nearby",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "React Native Wrapper for the Google Nearby SDK",
   "main": "index.js",
   "scripts": {
@@ -13,6 +13,7 @@
   "keywords": [
     "react-native",
     "google",
+    "native module",
     "nearby",
     "sdk",
     "android",

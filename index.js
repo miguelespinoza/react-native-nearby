@@ -1,5 +1,10 @@
 'use strict';
-import { DeviceEventEmitter, NativeModules, Platform } from 'react-native';
+import {
+  NativeAppEventEmitter,
+  DeviceEventEmitter,
+  NativeModules,
+  Platform
+} from 'react-native';
 let NearbyNative = NativeModules.Nearby;
 
 class Nearby {
@@ -19,8 +24,9 @@ class Nearby {
     this.nearby = NearbyNative;
     this.handlers = {};
     this.nearbyHelperHandlers = {};
+    this.Emitter = Platform.OS === 'ios' ? NativeAppEventEmitter : DeviceEventEmitter;
 
-    this.deviceEventSubscription = DeviceEventEmitter.addListener(
+    this.deviceEventSubscription = this.Emitter.addListener(
       'nearbySubscribe', this._handleEvent.bind(this)
     );
     this.nearby.init(config.message);
