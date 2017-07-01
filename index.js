@@ -39,7 +39,7 @@ class Nearby {
   /**
    * onFound: Nearby user found
    */
-  onFound(handler) {
+  onFound(event, handler) {
     this.handlers[event] = handler;
   }
 
@@ -50,3 +50,5 @@ class Nearby {
     this.nearbyHelperHandlers = handler;
   }
 }
+
+module.exports = Nearby;
